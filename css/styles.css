@@ -485,7 +485,6 @@ body {
     height: 100%;
     border-radius: 50%;
     background-color: var(--primary-brand);
-    );
     display: flex;
     justify-content: center;
     align-items: center;
@@ -632,8 +631,13 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scalex(1) rotate(0);
+    transition: transform var(--tra);
     padding: 24px;
+}
+
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scalex(3) rotate(90deg);
 }
 
 .modal-close {
